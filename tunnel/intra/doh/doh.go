@@ -328,7 +328,7 @@ func (t *transport) doQuery(q []byte) (response []byte, server *net.TCPAddr, qer
 	const mimetype = "application/dns-message"
 	req.Header.Set("Content-Type", mimetype)
 	req.Header.Set("Accept", mimetype)
-	req.Header.Set("User-Agent", "Intra")
+	req.Header.Set("User-Agent", "Sentrie-iOS-test")
 	log.Debugf("%d Sending query", id)
 	httpResponse, err := t.client.Do(req)
 	if err != nil {
